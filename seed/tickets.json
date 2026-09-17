@@ -1,0 +1,154 @@
+{
+  "board": "Facturo Support · demo",
+  "note": "Facturo is a fictional B2B invoicing SaaS (create, send, collect invoices; API and integrations). Lists: Inbox, Triage, In progress, Waiting on customer, Done. Fields: Priority (P1/P2/P3), Category (Billing/API/Integration/Account), Customer (text), Agent status (text). Cards in Inbox are reset before each demo; cards elsewhere age naturally.",
+  "tickets": [
+    {
+      "key": "T01",
+      "list": "Inbox",
+      "name": "Discount for long-time customer?",
+      "desc": "Hi, we've been on the Team plan since June 2025 and I saw a mention of a loyalty discount on your site. Could you confirm what we're entitled to and whether it applies automatically? Also, a colleague told me new customers get 5%, is that still right?\n\nThanks,\nLena Fischer, Office manager, Nordic Threads",
+      "labels": ["billing", "question"],
+      "fields": { "Customer": "Nordic Threads" },
+      "comments": []
+    },
+    {
+      "key": "T02",
+      "list": "Inbox",
+      "name": "Invoice PDFs are broken since we uploaded our new logo",
+      "desc": "Every invoice we generated this morning has a broken layout: the logo overlaps the invoice number, the totals column is cut off on the right, and the line items are misaligned. Screenshot attached. We send about 60 invoices a day to clients and had to stop. We use the custom template we set up last year.\n\nMarco Bellini, Finance lead, Casa Verde Studio",
+      "labels": ["bug"],
+      "fields": { "Customer": "Casa Verde Studio" },
+      "screenshot": "error-screenshot.png",
+      "comments": []
+    },
+    {
+      "key": "T03",
+      "list": "Inbox",
+      "name": "invoice.paid webhooks stopped after we moved to a new server",
+      "desc": "We migrated our backend last week and since then we don't receive invoice.paid webhooks, so our CRM never marks deals as paid. The dashboard shows deliveries as failed. Our endpoint answers 200 as far as we can tell.\n\nAnika Sørensen, Developer, Bolt & Bloom",
+      "labels": ["bug", "question"],
+      "fields": { "Customer": "Bolt & Bloom" },
+      "comments": []
+    },
+    {
+      "key": "T04",
+      "list": "Inbox",
+      "name": "Wrong VAT lines on split invoices to a Swiss client",
+      "desc": "When we split one project into two invoices for a client in Zurich (one for goods, one for consulting services), the second invoice applies French VAT instead of reverse charge, and the first one shows two VAT lines. The client's accountant rejected both. We create invoices through the API with the same customer object. Happy to share payloads.\n\nJulien Maret, CFO, Alpine Consulting",
+      "labels": ["bug"],
+      "fields": { "Customer": "Alpine Consulting" },
+      "comments": []
+    },
+    {
+      "key": "T05",
+      "list": "Inbox",
+      "name": "Payment link on our invoices says expired",
+      "desc": "Since yesterday, clients who click Pay now on our invoices land on a page saying the payment link has expired. Nothing changed on our side that I know of.\n\nSofia Ricci, Owner, Ricci Ceramics",
+      "labels": ["question"],
+      "fields": { "Customer": "Ricci Ceramics" },
+      "comments": []
+    },
+    {
+      "key": "T06",
+      "list": "Inbox",
+      "name": "Recurring invoices go out at 2am instead of 9am",
+      "desc": "Our monthly retainer invoices are scheduled for 9:00 but clients receive them around 2:00 in the morning, which looks unprofessional. We're in Lisbon.\n\nTom Reyes, Founder, Pedal Marketing",
+      "labels": ["question"],
+      "fields": { "Customer": "Pedal Marketing" },
+      "comments": []
+    },
+    {
+      "key": "T07",
+      "list": "Inbox",
+      "name": "Quote for annual prepay on Team plan",
+      "desc": "We're happy with the trial and want to commit for a year. What discount can you offer for paying the year upfront? We'd also like to know if the loyalty discount would stack on top later.\n\nPriya Nair, COO, Saffron Box",
+      "labels": ["billing"],
+      "fields": { "Customer": "Saffron Box" },
+      "comments": []
+    },
+    {
+      "key": "T08",
+      "list": "Inbox",
+      "name": "Getting 429 on /invoices during our end-of-month batch",
+      "desc": "On the last day of the month our job creates around 1,500 invoices from our ERP and gets rate-limited halfway. What's the limit and is there a batch endpoint?\n\nDaniel Okafor, Backend engineer, Urban Sprout",
+      "labels": ["question"],
+      "fields": { "Customer": "Urban Sprout" },
+      "comments": []
+    },
+    {
+      "key": "T09",
+      "list": "Inbox",
+      "name": "Pay now link expired (same as my colleague's message?)",
+      "desc": "Clients tell us the payment link is expired. Sorry if this is a duplicate, Sofia may have sent one already.\n\nLuca Ricci, Ricci Ceramics",
+      "labels": ["question"],
+      "fields": { "Customer": "Ricci Ceramics" },
+      "comments": []
+    },
+    {
+      "key": "T10",
+      "list": "Inbox",
+      "name": "Feature request: separate invoice numbering per client",
+      "desc": "We'd like a numbering series per client (ACME-2026-001, ...) instead of one global sequence. Some of our clients require it for their own audits.\n\nLena Fischer, Nordic Threads",
+      "labels": ["feature"],
+      "fields": { "Customer": "Nordic Threads" },
+      "comments": []
+    },
+    {
+      "key": "T11",
+      "list": "Waiting on customer",
+      "name": "API key rotated, ERP integration still using revoked key",
+      "desc": "We rotated our API key and now our ERP connector returns ERR_AUTH_401.\n\nHannah Weiss, Green Ledger",
+      "labels": ["question"],
+      "fields": { "Priority": "P2", "Category": "Account", "Customer": "Green Ledger", "Agent status": "Replied 2026-09-02" },
+      "comments": [
+        "Reply to customer: Hi Hannah, the connector still holds the old key. Update it under Integrations > ERP > API key and save; the 401 stops immediately. Let us know if you need help. Facturo pre-sales team"
+      ]
+    },
+    {
+      "key": "T12",
+      "list": "Waiting on customer",
+      "name": "Wants one invoice per department",
+      "desc": "Can we issue separate invoices per department to the same client? Three departments, one client.\n\nOmar Haddad, Finance, Souk Digital",
+      "labels": ["billing", "question"],
+      "fields": { "Priority": "P3", "Category": "Billing", "Customer": "Souk Digital", "Agent status": "Replied 2026-08-28" },
+      "comments": [
+        "Reply to customer: Hi Omar, yes: create the client three times with a department suffix, or use the cost-centre field on line items and filter at export. Which do you prefer? Facturo pre-sales team"
+      ]
+    },
+    {
+      "key": "T13",
+      "list": "Waiting on customer",
+      "name": "Blocked: waiting on Stripe about a failed payout",
+      "desc": "Payout of 12 September failed on the Stripe side. Case opened with Stripe support.\n\nElena Petrova, Vela Home",
+      "labels": ["blocked"],
+      "fields": { "Priority": "P2", "Category": "Integration", "Customer": "Vela Home", "Agent status": "Stripe case opened 2026-09-05" },
+      "comments": [
+        "Note: Stripe case #S-4471 opened, 5 business days SLA on their side."
+      ]
+    },
+    {
+      "key": "T14",
+      "list": "Done",
+      "name": "Upgrade from Solo to Team mid-month",
+      "desc": "How is the upgrade prorated?\n\nMaya Lindqvist, Fjord Knits",
+      "labels": ["billing"],
+      "fields": { "Priority": "P3", "Category": "Billing", "Customer": "Fjord Knits", "Agent status": "Closed 2026-08-20" },
+      "comments": [
+        "Reply to customer: Hi Maya, the upgrade is prorated to the day; you pay the difference for the remaining days of the month. Facturo pre-sales team",
+        "Note: customer confirmed, closing."
+      ]
+    },
+    {
+      "key": "T15",
+      "list": "Done",
+      "name": "How to correct an invoice that was already paid",
+      "desc": "We invoiced the wrong amount and the client already paid.\n\nDaniel Okafor, Urban Sprout",
+      "labels": ["question"],
+      "fields": { "Priority": "P2", "Category": "Billing", "Customer": "Urban Sprout", "Agent status": "Closed 2026-08-22" },
+      "comments": [
+        "Reply to customer: Hi Daniel, a paid invoice cannot be edited. Issue a credit note for the difference from the invoice page (More > Credit note), then a new invoice if needed. Facturo pre-sales team",
+        "Note: resolved with a credit note."
+      ]
+    }
+  ]
+}
